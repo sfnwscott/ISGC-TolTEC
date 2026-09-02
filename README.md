@@ -49,7 +49,8 @@ Observations are broken into separate maps taken in 20 minute exposures that are
 
 To correct pointing, I selected the Young Stellar Object VLA 1623 as a reference point at right-ascension $\text{16h 26m 26s}$ and declination $\text{-24}^{\circ}\text{ 24m 30s}$ . A flux cut was made to isolate the source before fitting a 2D Gaussian in order to determine the exact center. Then, the center was subtracted from the true coordinate to find the offset in the equatorial frame. `citlali` accepts pointing corrections in topocentric Az/El coordinates, so the transpose of the rotation matrix of the Parallactic Angle (PA) was used to convert to Az/El. Parallactic Angle is the angle subtending the North celestial pole and the local Zenith, meaning a rotation of PA about the line of sight can transform coordinates in either plane to the other, represented by the following rotation matrix.
 
-$$ \begin{bmatrix} {\Delta Az} \\ {\Delta El} \end{bmatrix} = \begin{bmatrix} \cos PA & \sin PA \\ -\sin PA & \cos PA \end{bmatrix} \begin{bmatrix} {\Delta RA} \\ {\Delta DEC} \end{bmatrix} $$
+
+$$ \begin{bmatrix} {\Delta Az} \\\\ {\Delta El} \end{bmatrix} = \begin{bmatrix} \cos (PA) & \sin (PA) \\\\ -\sin (PA) & \cos (PA) \end{bmatrix} \begin{bmatrix} {\Delta RA} \\\\ {\Delta DEC} \end{bmatrix} $$
 
 
 
